@@ -1,0 +1,239 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.contenedor {
+    position: relative;
+}
+
+.imagen {
+    width: 100%;
+    height: auto;
+    filter: blur(5px); /* Efecto desenfocado */
+}
+
+.logo, .titulo {
+    position: absolute;
+    top: 7%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: white; /* Color del texto */
+}
+
+.logo {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titulo {
+    left: 70%; /* Ajusta el título para pantallas grandes */
+    font-size: 2.5vw; /* Ajusta el tamaño del título de forma responsiva */
+    padding: 10px 20px; /* Añade espacio alrededor del título */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente negro */
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        left: 50%; /* Ajusta el título para pantallas medianas */
+        font-size: 4vw; /* Ajusta el tamaño del título de forma responsiva */
+    }
+    .logo {
+        left: 30%; /* Ajusta la posición del logo para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .titulo {
+        left: 40%; /* Ajusta el título para pantallas pequeñas */
+        font-size: 6vw; /* Ajusta el tamaño del título de forma responsiva */
+    }
+    .logo {
+        left: 20%; /* Ajusta la posición del logo para pantallas pequeñas */
+        width: 200px;
+        padding-left: 20px;
+    }
+    
+
+}
+.price-button {
+    background-color:  rgba(245, 147, 35, 0.849);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.price-circle {
+    background-color: #ffcc00;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px; /* Para centrar el texto verticalmente */
+    text-align: center; /* Para centrar el texto horizontalmente */
+}
+
+/* Estilos para el cuadro de búsqueda */
+.search-container {
+    width: 100%; /* Ancho completo */
+    max-width: 400px; /* Ancho máximo opcional */
+    margin: 0 auto; /* Centrar horizontalmente */
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.search-box {
+    position: relative;
+    display: flex; /* Mostrar los elementos en línea */
+    padding: 10px;
+}
+
+.search-input {
+    flex: 1; /* Que ocupe todo el espacio disponible */
+    padding: 10px 40px; /* Añade espacio alrededor del texto de búsqueda */
+    border: 1px solid #ccc; /* Establece un borde alrededor del cuadro de búsqueda */
+    border-radius: 20px; /* Redondea las esquinas del cuadro de búsqueda */
+    font-size: 16px; /* Tamaño de fuente */
+    outline: none; /* Elimina el borde de foco */
+}
+
+.search-button {
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.search-button i {
+    color: #555; /* Color del ícono de búsqueda */
+    font-size: 18px; /* Tamaño del ícono de búsqueda */
+}
+
+.categorias-container {
+    overflow-x: auto; /* Permitir el scroll horizontal */
+    white-space: nowrap; /* Evitar que las categorías se envuelvan */
+    padding: 10px 0; /* Añadir espacio alrededor de las categorías */
+    padding-left: 20px;
+}
+
+.categoria {
+    display: inline-block; /* Mostrar las categorías en línea */
+    margin-right: 20px; /* Espacio entre categorías */
+    vertical-align: top; /* Alinear las categorías en la parte superior */
+}
+
+.categoria i {
+    font-size: 24px; /* Tamaño del icono */
+    display: block; /* Hacer que los iconos se muestren como bloques */
+    margin-bottom: 5px; /* Espacio entre el icono y el texto */
+    text-align: center; /* Centrar el icono */
+    color: rgba(245, 147, 35, 0.849);
+}
+
+.categoria span {
+    display: block; /* Mostrar el texto en bloque */
+    text-align: center; /* Centrar el texto */
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.card {
+    width: 100%;
+    height: 90px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    
+   
+  }
+  .cards{
+    padding-top: 15px;
+  }
+  .card-content {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+  }
+  
+  .content-left {
+    padding: 20px;
+    flex: 1; /* Hace que ocupe el espacio restante */
+  }
+  
+  .content-right {
+    width: 160px; /* Ancho fijo para la imagen */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+  }
+  
+  .content-right img {
+    width: 80%; /* Ajusta el tamaño de la imagen al 100% */
+    height: auto;
+    object-fit: cover; /* Escala la imagen para llenar el contenedor manteniendo su relación de aspecto */
+    padding-right: 10px;
+  }
+  
+  
+  .card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .card-description {
+    color: #666;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+  }
+  .titulo-categoria {
+    margin-top: 20px;
+    
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-size: 36px; /* Tamaño de la fuente ajustado según sea necesario */
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+  .sticky {
+    position: sticky;
+    top: 0; /* La barra de categorías se pegará al borde superior del contenedor */
+    z-index: 1000; /* Asegura que la barra de categorías esté sobre otros elementos */
+    background-color: white; /* Cambia el color de fondo de la barra pegajosa según sea necesario */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra para destacar la barra pegajosa */
+}
+.categoria a {
+    text-decoration: none; /* Quítale el subrayado a todos los enlaces dentro de las categorías */
+    font-family: "Roboto", sans-serif;
+    color: black;
+}
+.instagram-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: rgba(245, 147, 35, 0.849);
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.instagram-button:hover {
+    background-color: #5773ff;
+}
+
+.instagram-icon {
+    width: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.botoninsta{
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+}
